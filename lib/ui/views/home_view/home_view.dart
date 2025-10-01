@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Riverpod Providers'),
+        title: const Text('RiverApp'),
       ),
       body: const _HomeScreenView(),
     );
@@ -23,32 +23,32 @@ class _HomeScreenView extends StatelessWidget {
     return ListView(
       children: const [
         _CustomListTile(
-            title: 'Provider Simple',
-            subTitle: 'Un provider de sólo lectura',
+            title: 'Simple Provider',
+            subTitle: 'A read-only provider',
             location: '/provider'),
         _CustomListTile(
             title: 'Provider + Go_Router',
-            subTitle: 'Un uso aplicado',
+            subTitle: 'A practical use case',
             location: '/provider-router'),
         _CustomListTile(
             title: 'State Provider',
-            subTitle: 'Un estado para almacenar un objeto',
+            subTitle: 'A state to store an object',
             location: '/state-provider'),
         _CustomListTile(
             title: 'State Provider + Provider',
-            subTitle: 'TODO - Una mezcla entre providers',
+            subTitle: 'TODO - A mix between providers',
             location: '/todo'),
         _CustomListTile(
             title: 'Future Provider',
-            subTitle: 'Mantener el estado de un future y su retorno',
+            subTitle: 'Maintain the state of a future and its return',
             location: '/future-provider'),
         _CustomListTile(
             title: 'Family Future Provider',
-            subTitle: 'Providers con argumentos',
+            subTitle: 'Providers with arguments',
             location: '/future-family-provider'),
         _CustomListTile(
             title: 'Stream Provider',
-            subTitle: 'Mantener el estado de un Stream y sus emosiones',
+            subTitle: 'Maintain the state of a Stream and its emissions',
             location: '/stream-provider'),
       ],
     );

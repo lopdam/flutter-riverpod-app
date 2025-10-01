@@ -1,6 +1,6 @@
 import 'package:go_router/go_router.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_app/presentation/screens/screens.dart';
+import 'package:riverpod_app/ui/views/views.dart';
 
 part 'app_router.g.dart';
 

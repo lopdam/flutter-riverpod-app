@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_app/config/config.dart';
-import 'package:riverpod_app/domain/entities/todo.dart';
+import 'package:riverpod_app/models/todo_model.dart';
 import 'package:uuid/uuid.dart';
 
 part 'todos_providers.g.dart';
@@ -12,24 +12,17 @@ class Todos extends _$Todos {
   @override
   List<Todo> build() {
     return [
-      Todo(id: uuid.v4(), description: RandomGenerator.getRandomName()),
-      Todo(id: uuid.v4(), description: RandomGenerator.getRandomName()),
+      Todo(id: uuid.v4(), description: "Buy groceries", isCompleted: false),
+      Todo(
+          id: uuid.v4(), description: "Write documentation", isCompleted: true),
       Todo(
           id: uuid.v4(),
-          description: RandomGenerator.getRandomName(),
-          isCompleted: true),
-      Todo(
-          id: uuid.v4(),
-          description: RandomGenerator.getRandomName(),
+          description: "Review pull requests",
           isCompleted: false),
+      Todo(id: uuid.v4(), description: "Call client", isCompleted: true),
+      Todo(id: uuid.v4(), description: "Fix bug #123", isCompleted: false),
       Todo(
-          id: uuid.v4(),
-          description: RandomGenerator.getRandomName(),
-          isCompleted: true),
-      Todo(
-          id: uuid.v4(),
-          description: RandomGenerator.getRandomName(),
-          isCompleted: false)
+          id: uuid.v4(), description: "Update dependencies", isCompleted: false)
     ];
   }
 
@@ -47,14 +40,14 @@ class Todos extends _$Todos {
 }
 
 @riverpod
-List<Todo> invitedTodos(Ref ref) {
+List<Todo> doneTasks(Ref ref) {
   final List<Todo> todos =
       ref.watch(todosProvider).where((element) => element.isCompleted).toList();
   return todos;
 }
 
 @riverpod
-List<Todo> notInvitedTodos(Ref ref) {
+List<Todo> pendingTasks(Ref ref) {
   final List<Todo> todos = ref
       .watch(todosProvider)
       .where((element) => !element.isCompleted)

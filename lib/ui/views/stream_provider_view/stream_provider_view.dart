@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_app/presentation/providers/stream_provider.dart';
+import 'package:riverpod_app/providers/stream_provider.dart';
 
 class StreamProviderScreen extends StatelessWidget {
   const StreamProviderScreen({super.key});

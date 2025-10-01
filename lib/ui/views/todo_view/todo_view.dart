@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/config.dart';
-import 'package:riverpod_app/domain/entities/todo.dart';
-import 'package:riverpod_app/presentation/providers/segment_provider.dart';
-import 'package:riverpod_app/presentation/providers/todos_providers.dart';
+import 'package:riverpod_app/models/todo_model.dart';
+import 'package:riverpod_app/providers/segment_provider.dart';
+import 'package:riverpod_app/providers/todos_providers.dart';
 
 class TodoScreen extends ConsumerWidget {
   const TodoScreen({super.key});
@@ -38,25 +38,24 @@ class _TodoView extends ConsumerWidget {
 
     if (segment == SegmentType.all) {
       todos = ref.watch(todosProvider);
-    } else if (segment == SegmentType.invited) {
-      todos = ref.watch(invitedTodosProvider);
+    } else if (segment == SegmentType.done) {
+      todos = ref.watch(doneTasksProvider);
     } else {
-      todos = ref.watch(notInvitedTodosProvider);
+      todos = ref.watch(pendingTasksProvider);
     }
 
     return Column(
       children: [
         const ListTile(
-          title: Text('Listado de invitados'),
-          subtitle: Text('Estas son las personas a invitar a la fiesta'),
+          title: Text('Todo List'),
+          subtitle: Text('Manage your tasks and mark them as completed'),
         ),
         SegmentedButton(
           showSelectedIcon: false,
           segments: const [
-            ButtonSegment(value: SegmentType.all, icon: Text('Todos')),
-            ButtonSegment(value: SegmentType.invited, icon: Text('Invitados')),
-            ButtonSegment(
-                value: SegmentType.notInvited, icon: Text('No invitados')),
+            ButtonSegment(value: SegmentType.all, icon: Text('All')),
+            ButtonSegment(value: SegmentType.done, icon: Text('Completed')),
+            ButtonSegment(value: SegmentType.pending, icon: Text('Pending')),
           ],
           selected: <SegmentType>{segment},
           onSelectionChanged: (value) {

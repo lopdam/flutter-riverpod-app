@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/helpers/random_generator.dart';
-import 'package:riverpod_app/presentation/providers/state_providers.dart';
-import 'package:riverpod_app/presentation/providers/theme_provider.dart';
-import 'package:riverpod_app/presentation/providers/username_provider.dart';
+import 'package:riverpod_app/providers/state_providers.dart';
+import 'package:riverpod_app/providers/theme_provider.dart';
+import 'package:riverpod_app/providers/username_provider.dart';
 
 class StateProviderScreen extends ConsumerWidget {
   const StateProviderScreen({super.key});

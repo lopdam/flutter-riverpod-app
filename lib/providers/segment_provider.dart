@@ -2,7 +2,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'segment_provider.g.dart';
 
-enum SegmentType { all, invited, notInvited }
+enum SegmentType { all, done, pending }
 
 @riverpod
 class Segment extends _$Segment {

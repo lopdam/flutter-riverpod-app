@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
-import 'package:riverpod_app/presentation/providers/futures_providers.dart';
+import 'package:riverpod_app/providers/futures_providers.dart';
 
 class FamilyFutureScreen extends ConsumerStatefulWidget {
   const FamilyFutureScreen({super.key});

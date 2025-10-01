@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_app/presentation/providers/futures_providers.dart';
+import 'package:riverpod_app/providers/futures_providers.dart';
 
 class FutureProviderScreen extends ConsumerWidget {
   const FutureProviderScreen({super.key});
