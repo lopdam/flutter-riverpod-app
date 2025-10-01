@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/config.dart';
-import 'package:riverpod_app/models/todo_model.dart';
-import 'package:riverpod_app/providers/segment_provider.dart';
-import 'package:riverpod_app/providers/todos_providers.dart';
+import 'package:riverpod_app/domain/models/todo_model.dart';
+import 'package:riverpod_app/presentation/providers/segment_provider.dart';
+import 'package:riverpod_app/presentation/providers/todos_providers.dart';
 
-class TodoScreen extends ConsumerWidget {
-  const TodoScreen({super.key});
+class TodoView extends ConsumerWidget {
+  const TodoView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

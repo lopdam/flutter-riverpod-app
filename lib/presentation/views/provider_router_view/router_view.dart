@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/config.dart';
 
-class RouterScreen extends ConsumerWidget {
-  const RouterScreen({super.key});
+class RouterView extends ConsumerWidget {
+  const RouterView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {

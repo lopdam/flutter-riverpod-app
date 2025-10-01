@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_app/providers/hello_world_provider.dart';
+import 'package:riverpod_app/presentation/providers/hello_world_provider.dart';
 
-class ProviderScreen extends HookConsumerWidget {
-  const ProviderScreen({super.key});
+class ProviderView extends HookConsumerWidget {
+  const ProviderView({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
