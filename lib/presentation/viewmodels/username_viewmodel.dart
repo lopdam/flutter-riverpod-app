@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'username_provider.g.dart';
+part 'username_viewmodel.g.dart';
 
 @Riverpod(keepAlive: true)
 class UserName extends _$UserName {

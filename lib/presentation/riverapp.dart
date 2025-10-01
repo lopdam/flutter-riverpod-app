@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/config.dart';
-import 'package:riverpod_app/presentation/providers/theme_provider.dart';
+import 'package:riverpod_app/presentation/viewmodels/theme_viewmodel.dart';
 
 class RiverApp extends ConsumerWidget {
   const RiverApp({super.key});

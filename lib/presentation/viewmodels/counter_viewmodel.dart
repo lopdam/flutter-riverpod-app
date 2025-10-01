@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'state_providers.g.dart';
+part 'counter_viewmodel.g.dart';
 
 @Riverpod(keepAlive: true)
 class Counter extends _$Counter {

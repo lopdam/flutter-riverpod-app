@@ -1,6 +1,6 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-part 'segment_provider.g.dart';
+part 'segment_viewmodel.g.dart';
 
 enum SegmentType { all, done, pending }
 

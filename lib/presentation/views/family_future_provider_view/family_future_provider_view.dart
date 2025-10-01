@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod_app/presentation/providers/futures_providers.dart';
+import 'package:riverpod_app/data/services/pokemon_service.dart';
 
 class FamilyFutureView extends ConsumerStatefulWidget {
   const FamilyFutureView({super.key});

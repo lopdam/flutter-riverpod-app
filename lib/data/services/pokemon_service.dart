@@ -1,9 +1,9 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:riverpod_app/config/config.dart';
 
-part 'futures_providers.g.dart';
+part 'pokemon_service.g.dart';
 
-@Riverpod(keepAlive: true)
+@riverpod
 Future<String> pokemonName(Ref ref) async {
   final String pokemon = await PokemonInformation.getPokemonName(1);
   return pokemon;

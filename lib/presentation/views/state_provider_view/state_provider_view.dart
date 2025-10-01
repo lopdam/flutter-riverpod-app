@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/helpers/random_generator.dart';
-import 'package:riverpod_app/presentation/providers/state_providers.dart';
-import 'package:riverpod_app/presentation/providers/theme_provider.dart';
-import 'package:riverpod_app/presentation/providers/username_provider.dart';
+import 'package:riverpod_app/presentation/viewmodels/counter_viewmodel.dart';
+import 'package:riverpod_app/presentation/viewmodels/theme_viewmodel.dart';
+import 'package:riverpod_app/presentation/viewmodels/username_viewmodel.dart';
 
 class StateProviderView extends ConsumerWidget {
   const StateProviderView({super.key});

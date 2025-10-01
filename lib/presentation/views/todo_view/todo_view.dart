@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_app/config/config.dart';
 import 'package:riverpod_app/domain/models/todo_model.dart';
-import 'package:riverpod_app/presentation/providers/segment_provider.dart';
-import 'package:riverpod_app/presentation/providers/todos_providers.dart';
+import 'package:riverpod_app/presentation/viewmodels/segment_viewmodel.dart';
+import 'package:riverpod_app/presentation/viewmodels/todos_viewmodel.dart';
 
 class TodoView extends ConsumerWidget {
   const TodoView({super.key});
