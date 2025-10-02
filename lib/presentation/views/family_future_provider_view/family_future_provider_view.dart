@@ -31,7 +31,7 @@ class _FamilyFutureScreenState extends ConsumerState<FamilyFutureView> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           FloatingActionButton(
-            child: const Icon(Icons.add),
+            child: const Icon(Icons.plus_one_rounded),
             onPressed: () {
               setState(() {
                 id++;
